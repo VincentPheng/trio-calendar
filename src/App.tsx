@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Route, Routes } from 'react-router';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './pages/Landing';
 import MeetingView from './pages/MeetingView';
 import TimeSlotView from './pages/TimeSlotView';
