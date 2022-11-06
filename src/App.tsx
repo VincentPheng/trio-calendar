@@ -10,16 +10,14 @@ import MeetingInfo from './pages/MeetingInfo';
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Box textAlign="center" fontSize="xl" h="100vh">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/meeting/:id" element={<MeetingView />}>
-            <Route index element={<TimeSlotView />} />
-            <Route path="slots" element={<CalendarView />} />
-            <Route path="confirm" element={<MeetingInfo />} />
-          </Route>
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/meeting/:id" element={<MeetingView />}>
+          <Route index element={<TimeSlotView />} />
+          <Route path="slots" element={<CalendarView />} />
+          <Route path="confirm" element={<MeetingInfo />} />
+        </Route>
+      </Routes>
     </Box>
   </ChakraProvider>
 );
