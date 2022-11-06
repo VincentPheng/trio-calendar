@@ -1,7 +1,7 @@
 {
   "name": "trio-calendar",
   "version": "0.1.0",
-  "homepage": "https://vincentpheng.github.io/trio-calendar/",
+  "homepage": "https://vincentpheng.github.io/trio-calendar",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.3.7",
