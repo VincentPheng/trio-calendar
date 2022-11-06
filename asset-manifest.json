@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/trio-calendar/static/js/main.5b7429e7.js",
+    "main.js": "/trio-calendar/static/js/main.4dd606a2.js",
     "index.html": "/trio-calendar/index.html",
-    "main.5b7429e7.js.map": "/trio-calendar/static/js/main.5b7429e7.js.map"
+    "main.4dd606a2.js.map": "/trio-calendar/static/js/main.4dd606a2.js.map"
   },
   "entrypoints": [
-    "static/js/main.5b7429e7.js"
+    "static/js/main.4dd606a2.js"
   ]
 }
