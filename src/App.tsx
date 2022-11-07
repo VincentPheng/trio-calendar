@@ -9,8 +9,8 @@ import MeetingInfo from './pages/MeetingInfo';
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl" h="100vh">
-      <Router basename={`/${process.env.PUBLIC_URL}`} >
+    <Box textAlign="center" fontSize="xl">
+      <Router>
         <Routes>
           <Route path="" element={<Landing />} />
           <Route path="/meeting/:id" element={<MeetingView />}>

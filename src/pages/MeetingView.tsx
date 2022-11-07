@@ -22,7 +22,7 @@ const MeetingView = (props: Props) => {
   const navigate = useNavigate();
 
   return (
-    <SimpleGrid columns={10} spacing={3} h="100%">
+    <SimpleGrid columns={10} spacing={3} minH="100vh">
       <GridItem rowSpan={1} colSpan={2} h="100%">
         <Card h="100%">
           <Button

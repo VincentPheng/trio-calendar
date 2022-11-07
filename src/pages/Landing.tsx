@@ -2,7 +2,8 @@ import {
   Avatar,
   Center,
   Divider,
-  HStack,
+  GridItem,
+  SimpleGrid,
   Spacer,
   Text,
   VStack,
@@ -17,17 +18,40 @@ import { Appointment } from '../types';
 
 const Landing = () => {
   return (
-    <Center h="100%">
+    <Center minH="100vh">
       <VStack>
-        <HStack spacing={5}>
-          <MeetingCard id={'snyikos'} appointment={APPOINTMENTS['snyikos']} />
-          <MeetingCard id={'jpere139'} appointment={APPOINTMENTS['jpere139']} />
-        </HStack>
-        <HStack spacing={5}>
-          <MeetingCard id={'myhurtad'} appointment={APPOINTMENTS['myhurtad']} />
-          <MeetingCard id={'veleal'} appointment={APPOINTMENTS['veleal']} />
-          <MeetingCard id={'mamoral'} appointment={APPOINTMENTS['mamoral']} />
-        </HStack>
+        <SimpleGrid
+          columns={{
+            sm: 1,
+            md: 2,
+            lg: 3,
+            xl: 4,
+            '2xl': 5,
+          }}
+          spacing={5}
+        >
+          <GridItem colSpan={1}>
+            <MeetingCard id={'snyikos'} appointment={APPOINTMENTS['snyikos']} />
+          </GridItem>
+          <GridItem colSpan={1}>
+            <MeetingCard
+              id={'jpere139'}
+              appointment={APPOINTMENTS['jpere139']}
+            />
+          </GridItem>
+          <GridItem colSpan={1}>
+            <MeetingCard
+              id={'myhurtad'}
+              appointment={APPOINTMENTS['myhurtad']}
+            />
+          </GridItem>
+          <GridItem colSpan={1}>
+            <MeetingCard id={'veleal'} appointment={APPOINTMENTS['veleal']} />
+          </GridItem>
+          <GridItem colSpan={1}>
+            <MeetingCard id={'mamoral'} appointment={APPOINTMENTS['mamoral']} />
+          </GridItem>
+        </SimpleGrid>
       </VStack>
     </Center>
   );
@@ -41,14 +65,14 @@ type MeetingCardProps = {
 const MeetingCard = ({ id, appointment }: MeetingCardProps) => {
   const navigate = useNavigate();
   return (
-    <Card h="600px">
+    <Card h="25em" w="15em">
       <Avatar
         bg="gray.300"
         size="2xl"
         name={appointment.name}
         src={appointment.src}
       />
-      <Text fontWeight="bold" fontSize="4xl">
+      <Text fontWeight="bold" fontSize="3xl">
         {appointment.name}
       </Text>
       <Text fontWeight="bold">{appointment.subtitle}</Text>
